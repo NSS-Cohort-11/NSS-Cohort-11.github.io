@@ -1,0 +1,21 @@
+<div id="studentPics">
+  <h1>.ourClass:</h1>
+
+  {% for post in site.posts %}
+    {% if post.flipCard == "true" %}
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front" style="background-image: url({{post.imgUrl}})">
+        <!-- front content -->
+        </div>
+        <div class="back">
+        <h2>{{post.firstName}} {{post.lastName}}</h2>
+        <p>{{post.body}}</p>
+        <br>
+        <p><a href="{{post.websiteUrl}}">Portfolio</a></p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>
