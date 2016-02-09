@@ -19,6 +19,9 @@ h1 {
 	font-style: italic;
 }
 
+
+/* CSS for top photo/video  */
+
 #videoHeader {
 	background-color: #f8ffe7;
 }
@@ -34,184 +37,6 @@ h1 {
 	color: #fff;
 	font-family: monospace;
 	font-size: 2.2em;
-}
-
-#introText {
-	padding: 20px;
-	background-color: #f8ffe7;
-	font-family: Helvetica, Tahoma, sans-serif;
-}
-
-#introText h1 {
-	color: #697f2a;
-}
-
-.tech {
-	background-size: cover;
-	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
-	border-radius: 5px;
-	height: 70px;
-	width: 70px;
-	margin: 0 3px;
-	display: inline-block;
-}
-
-.tech1 {
-	background-color: #ccc;
-	background-image: url("http://www.schoolbios.com/assets/images/design/technology/jquery.png");
-}
-
-.tech2 {
-	background-image: url("http://3.bp.blogspot.com/-PTty3CfTGnA/TpZOEjTQ_WI/AAAAAAAAAeo/KeKt_D5X2xo/s1600/js.jpg");
-}
-
-.tech3 {
-	background-color: #fff;
-	background-image: url("http://voidcanvas.com/wp-content/uploads/2015/10/angularjs-logo.png");
-}
-
-.tech4 {
-	background-image: url("https://kimtatthang.files.wordpress.com/2015/03/learning-node-js.png");
-}
-
-.tech5 {
-	background-color: #000;
-	background-image: url("https://image.freepik.com/free-icon/github-logo-in-a-rounded-square_318-40761.jpg");
-}
-
-.tech6 {
-	background-image: url("http://ionicframework.com/img/ionic-logo-blog.png");
-}
-
-.tech7 {
-	background-image: url("http://www.joshmorony.com/wp-content/uploads/2015/08/firebase-header-200x200.png");
-}
-
-.tech8 {
-	background-image: url("http://www.networkredux.com/sites/default/files/parners_summary_mongodb.jpg");
-}
-
-#studentPics {
-	background-color: #697f2a;
-	padding: 20px;
-	color: #fff;
-	box-shadow: 0 2px 4px #000;
-}
-
-#studentLifeText {
-	padding: 20px 20px 40px;
-	color: #fff;
-	background-image: url("greentint2.jpg");
-	background-size: cover;
-	font-family: Helvetica, Tahoma, sans-serif;
-	height: 680px;
-}
-
-#studentLifeText p {
-	width: 75%;
-	text-shadow: 2px 0px 4px rgba(0,0,0,0.6);
-}
-
-#studentLifePics {
-	padding: 20px;
-	background-color: #f8ffe7;
-	text-align: center;
-}
-
-.carousel-inner>.item>img {
-	width: 100%;
-}
-
-.back {
-	color: #000;
-	text-align: center;
-	box-sizing: border-box;
-	padding: 20px;
-}
-
-.back a {
-	text-decoration: none;
-	font-weight: bold;
-	color: #8ba854;
-}
-
-.back a:hover {
-	color: #5c742e;
-}
-
-/* entire container, keeps perspective */
-.flip-container {
-	perspective: 1000;
-	display: inline-block;
-	margin: 0 5px 10px;
-}
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
-
-.flip-container, .front, .back {
-	width: 215px;
-	height: 300px;
-}
-
-/* flip speed goes here */
-.flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-
-	position: relative;
-}
-
-/* hide back of pane during swap */
-.front, .back {
-	backface-visibility: hidden;
-
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(180deg);
-	background-color: #fff;
-}
-
-.front.joshua {
-	background-image: url("card-demo-pic.jpg");
-}
-
-.front.sketch {
-	background-image: url("sketch.jpg");
-}
-
-.front.glasses {
-	background-image: url("glasses.jpg");
-}
-
-.front.james {
-	background-image: url("james.jpg");
-}
-
-.front.guitar {
-	background-image: url("guitar.jpg");
-}
-
-.front.paint {
-	background-image: url("paint.jpg");
-}
-
-#techRow {
-	text-align: center;
-	padding: 20px;
 }
 
 .blinking-cursor {
@@ -273,214 +98,201 @@ h1 {
   }
 }
 
-/*#lab {
-	width: 1000px;
-	overflow: hidden;
-	padding-bottom: 70px;
-	position: relative;
-	margin: 0 auto;
-	margin-bottom: 2.5em;
-	background: rgb(236, 236, 236);
 
-	-webkit-transition: all ease 500ms;
-	-moz-transition: all ease 500ms;
-	-o-transition: all ease 500ms;
-	-ms-transition: all ease 500ms;
-	transition: all ease 500ms;
-}*/
+/* CSS for "About" section beneath head photo */
 
-.beaker {
-	-webkit-filter: drop-shadow(#424242 0px 1px 0px);
-	border-bottom: 2em solid #FFF;
-	border-left: 1em solid transparent;
-	border-right: 1em solid transparent;
-	border-radius: .5em;
-	height: 0;
-	width: 1em;
-	position: absolute;
-	right: 0.7em;
-	bottom: 22%;
-	font-size: 0.6em;
+#introText {
+	padding: 20px;
+	background-color: #f8ffe7;
+	font-family: Helvetica, Tahoma, sans-serif;
 }
 
-.beaker::before {
-	border-left: .25em solid #FFF;
-	border-radius: .25em;
-	border-right: .25em solid #FFF;
-	content: '';
-	height: .25em;
-	left: -.25em;
-	position: absolute;
-	top: -1em;
-	width: 1em;
+#introText h1 {
+	color: #697f2a;
 }
 
-.beaker::after {
-	border-left: .25em solid #FFF;
-	border-right: .25em solid #FFF;
-	content: '';
-	height: 1em;
-	left: 0;
-	position: absolute;
-	top: -1em;
-	width: .5em;
-}
 
-.sectionheader {
-	position: relative;
-}
+/* CSS for Techology icon list below intro text */
 
-.lab_item {
-	width: 200px;
-	height: 230px;
-	position: relative;
+.tech {
+	background-size: cover;
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+	border-radius: 5px;
+	height: 70px;
+	width: 70px;
+	margin: 0 3px;
 	display: inline-block;
 }
 
-.hexagon2 {
+#techRow {
+	text-align: center;
+	padding: 20px;
+}
+
+.tech1 {
+	background-color: #ccc;
+	background-image: url("http://www.schoolbios.com/assets/images/design/technology/jquery.png");
+}
+
+.tech2 {
+	background-image: url("http://3.bp.blogspot.com/-PTty3CfTGnA/TpZOEjTQ_WI/AAAAAAAAAeo/KeKt_D5X2xo/s1600/js.jpg");
+}
+
+.tech3 {
+	background-color: #fff;
+	background-image: url("http://voidcanvas.com/wp-content/uploads/2015/10/angularjs-logo.png");
+}
+
+.tech4 {
+	background-image: url("https://kimtatthang.files.wordpress.com/2015/03/learning-node-js.png");
+}
+
+.tech5 {
+	background-color: #000;
+	background-image: url("https://image.freepik.com/free-icon/github-logo-in-a-rounded-square_318-40761.jpg");
+}
+
+.tech6 {
+	background-image: url("http://ionicframework.com/img/ionic-logo-blog.png");
+}
+
+.tech7 {
+	background-image: url("http://www.joshmorony.com/wp-content/uploads/2015/08/firebase-header-200x200.png");
+}
+
+.tech8 {
+	background-image: url("http://www.networkredux.com/sites/default/files/parners_summary_mongodb.jpg");
+}
+
+
+/* CSS for individual student profile pics */
+
+#studentPics {
+	background-color: #697f2a;
+	padding: 20px;
+	color: #fff;
+	box-shadow: 0 2px 4px #000;
+}
+
+.front.joshua {
+	background-image: url("card-demo-pic.jpg");
+}
+
+.front.sketch {
+	background-image: url("sketch.jpg");
+}
+
+.front.glasses {
+	background-image: url("glasses.jpg");
+}
+
+.front.james {
+	background-image: url("james.jpg");
+}
+
+.front.guitar {
+	background-image: url("guitar.jpg");
+}
+
+.front.paint {
+	background-image: url("paint.jpg");
+}
+
+/* entire individual container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+	display: inline-block;
+	margin: 0 5px 10px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 215px;
+	height: 300px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
 	position: absolute;
-	width: 200px;
-	height: 400px;
-	top: -85px;
+	top: 0;
+	left: 0;
 }
 
-.hexagon {
-	overflow: hidden;
-	visibility: hidden;
-
-	-webkit-transform: rotate(120deg);
-	-moz-transform: rotate(120deg);
-	-o-transform: rotate(120deg);
-	-ms-transform: rotate(120deg);
-	transform: rotate(120deg);
-	cursor: pointer;
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
 }
 
-.hexagon-in1 {
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-
-	-webkit-transform: rotate(-60deg);
-	-moz-transform: rotate(-60deg);
-	-o-transform: rotate(-60deg);
-	-ms-transform: rotate(-60deg);
-	transform: rotate(-60deg);
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+	background-color: #fff;
 }
 
-.hexagon-in2 {
-	-webkit-box-shadow: inset 0 0 0 200px rgba(176, 218, 212, 0.48);
-	box-shadow: inset 0 0 0 200px rgba(176, 218, 212, 0.48);
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-position: 50%;
-
-	-webkit-background-size: 125%;
-	-moz-background-size: 125%;
-	background-size: 125%;
-	visibility: visible;
-
-	-webkit-transform: rotate(-60deg);
-	-moz-transform: rotate(-60deg);
-	-o-transform: rotate(-60deg);
-	-ms-transform: rotate(-60deg);
-	transform: rotate(-60deg);
-
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	-ms-transition: all 0.5s ease;
-	transition: all 0.5s ease;
+.back {
+	color: #000;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 20px;
 }
 
-.hexagon-in2:hover {
-	-webkit-box-shadow: inset 0 0 0 0px #B0DAD4;
-	box-shadow: inset 0 0 0 0px #B0DAD4;
+.back a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #8ba854;
 }
 
-#lab article {
-	padding-top: 1em;
-	width: 820px;
-	margin: 0 auto;
+.back a:hover {
+	color: #5c742e;
 }
 
-.lab_item:nth-child(7n-2) {
-	margin-left: 101px;
+
+/* CSS for student life text below individual photos */
+
+#studentLifeText {
+	padding: 20px 20px 40px;
+	color: #fff;
+	background-image: url("greentint2.jpg");
+	background-size: cover;
+	font-family: Helvetica, Tahoma, sans-serif;
+	height: 680px;
 }
 
-.lab_item:nth-child(n+5) {
-	margin-top: -55px;
+#studentLifeText p {
+	width: 75%;
+	text-shadow: 2px 0px 4px rgba(0,0,0,0.6);
 }
 
-@media (max-width: 1015px) {
-	#lab {
+
+/* CSS for pics/carousel area */
+
+#studentLifePics {
+	padding: 20px;
+	background-color: #f8ffe7;
+	text-align: center;
+}
+
+.carousel-inner>.item>img {
 	width: 100%;
 }
 
-}
 
-@media (max-width: 820px) {
-	.lab_item:nth-child(5n-1) {
-	margin-left: 102px;
-}
-
-.lab_item:nth-child(n+4) {
-	margin-top: -62px;
-}
-
-.lab_item:nth-child(7n-2) {
-	margin-left: 0px;
-}
-
-.lab_item:nth-child(n+5) {
-	margin-top: -56px;
-}
-
-#lab article {
-	width: 610px;
-}
-
-}
-
-@media (max-width: 640px) {
-	#lab article {
-	width: 405px;
-}
-
-.lab_item:nth-child(5n-1) {
-	margin-left: 0px;
-}
-
-.lab_item:nth-child(3n) {
-	margin-left: 102px;
-}
-
-.lab_item:nth-child(n+3) {
-	margin-top: -56px;
-}
-
-}
-
-@media (max-width: 450px) {
-	#lab article {
-	width: 300px;
-}
-
-.lab_item:nth-child(3n) {
-	margin-left: 0px;
-}
-
-.lab_item:nth-child(2n) {
-	margin-left: 102px;
-}
-
-.lab_item:nth-child(n+2) {
-	margin-top: -56px;
-}
-}
-
+/* CSS for page footer */
 
 footer {
 	background-color: #777f60;
@@ -488,7 +300,3 @@ footer {
 	text-align: center;
 	padding: 10px 0;
 }
-
-
-
-
