@@ -172,7 +172,16 @@ h1 {
 	padding: 20px;
 	color: #fff;
 	box-shadow: 0 2px 4px #000;
+
+  #gridWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
 }
+
+
 
 
 /* entire individual container, keeps perspective */

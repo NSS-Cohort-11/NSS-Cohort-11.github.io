@@ -1,22 +1,24 @@
 <div id="studentPics">
   <h1>.ourClass:</h1>
 
-  {% for post in site.posts %}
-    {% if post.flipCard == "true" %}
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-      <div class="flipper">
-        <div class="front" style="background-image: url({{post.imgUrl}})">
-        <!-- front content -->
-        </div>
-        <div class="back">
-        <h2>{{post.firstName}} {{post.lastName}}</h2>
-        <p>{{post.body}}</p>
-        <p id="links">
-          <a href="{{post.websiteUrl}}">Portfolio</a> | <a href="{{post.githubUrl}}">Github</a> | <a href="{{post.linkedInUrl}}">LinkedIn</a>
-        </p>
+  <div id="gridWrapper">
+    {% for post in site.posts %}
+      {% if post.flipCard == "true" %}
+      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+          <div class="front" style="background-image: url({{post.imgUrl}})">
+          <!-- front content -->
+          </div>
+          <div class="back">
+          <h2>{{post.firstName}} {{post.lastName}}</h2>
+          <p>{{post.body}}</p>
+          <p id="links">
+            <a href="{{post.websiteUrl}}">Portfolio</a> | <a href="{{post.githubUrl}}">Github</a> | <a href="{{post.linkedInUrl}}">LinkedIn</a>
+          </p>
+          </div>
         </div>
       </div>
-    </div>
-    {% endif %}
-  {% endfor %}
-</div>''
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
