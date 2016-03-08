@@ -8,13 +8,15 @@
         <div class="front" style="background-image: url({{post.imgUrl}})">
         <!-- front content -->
         </div>
-        <div class="back" style="background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9)),url({{post.imgUrl}})">
+        <div class="back">
         <h2>{{post.firstName}} {{post.lastName}}</h2>
         <p>{{post.body}}</p>
-        <p><a href="{{post.websiteUrl}}">Portfolio</a> | <a href="{{post.githubUrl}}">Github</a> | <a href="{{post.linkedInUrl}}">LinkedIn</a></p>
+        <p id="links">
+          <a href="{{post.websiteUrl}}">Portfolio</a> | <a href="{{post.githubUrl}}">Github</a> | <a href="{{post.linkedInUrl}}">LinkedIn</a>
+        </p>
         </div>
       </div>
     </div>
     {% endif %}
   {% endfor %}
-</div>
+</div>''

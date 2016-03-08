@@ -214,22 +214,34 @@ h1 {
 .front {
 	/* for firefox 31 */
 	transform: rotateY(0deg);
+  background-size: cover;
+
 }
 
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
 	color: #000;
-	text-align: center;
+	text-align: left;
 	box-sizing: border-box;
 	padding: 20px;
-
+  background: linear-gradient(
+                rgba(255, 255, 255, 0.6),
+                rgba(255, 255, 255, 0.9)),
+              url('/images/blueHexagon.jpg');
+  background-size: 100%, 100%;
   h2 {
+    text-align: center;
     margin: 10px auto;
     font-size: 1.25em;
   }
 
+  p#links {
+    text-align: center;
+  }
+
   a {
+    text-align: center;
     font-size: 0.75em;
   	text-decoration: none;
   	font-weight: bold;
