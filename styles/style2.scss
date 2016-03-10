@@ -1,6 +1,14 @@
 ---
 # Front matter comment to ensure Jekyll properly reads file.
 ---
+
+$NSS-lightest: #d9eaf2;
+$NSS-light: #b4d4e4;
+$NSS-medium: #68a9ca;
+$NSS-dark: #2d637f;
+$NSS-darker: #214a5e;
+$NSS-darkest: #142c39;
+
 body {
 	margin: 0;
 	padding: 0;
@@ -11,6 +19,7 @@ h1 {
 	font-family: monospace;
 	font-weight: normal;
 	margin-top: 0;
+  font-size: 1.8em;
 }
 
 .accent {
@@ -32,20 +41,30 @@ h1 {
 
 #videoHeader .headline {
 	position: absolute;
-	top: 30px;
-	left: 30px;
+	top: 20px;
 	color: #fff;
 	font-family: monospace;
-	font-size: 2.2em;
+	font-size: 1.2em;
+	line-height: 0.9em;
+	width: 280px;
+	margin: 0 auto;
+	left: 50%;
+}
+
+#pageHead {
+	text-align: center;
+	position: relative;
+	left: -50%;
+	vertical-align: top;
 }
 
 .blinking-cursor {
   font-weight: 100;
   display: inline;
-  font-size: 48px;
+  font-size: 28px;
   color: #fff;
   position: relative;
-  bottom: -8px;
+  bottom: -5px;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
   -ms-animation: 1s blink step-end infinite;
@@ -103,7 +122,7 @@ h1 {
 
 #introText {
 	padding: 20px;
-	background-color: #d5f1ff;
+	background-color: $NSS-lightest;
 	font-family: Helvetica, Tahoma, sans-serif;
 }
 
@@ -167,66 +186,55 @@ h1 {
 
 /* CSS for individual student profile pics */
 
+#classBanner {
+  background: $NSS-darker; /* Old browsers */
+  background: -moz-linear-gradient(top, $NSS-darker 0%, $NSS-darkest 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $NSS-darker 0%,$NSS-darkest 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $NSS-darker 0%,$NSS-darkest 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$NSS-darker', endColorstr='$NSS-darkest',GradientType=0 ); /* IE6-9 */
+  color: #fff;
+  text-shadow: 0 1px 3px $NSS-darkest;
+  padding: 15px 20px;
+  margin: 0;
+}
+
 #studentPics {
-	background-color: #2d637f;
+	background-color: $NSS-dark;
 	padding: 20px;
 	color: #fff;
 	box-shadow: 0 2px 4px #000;
-}
-
-.front.joshua {
-	background-image: url("card-demo-pic.jpg");
-}
-
-.front.sketch {
-	background-image: url("sketch.jpg");
-}
-
-.front.glasses {
-	background-image: url("glasses.jpg");
-}
-
-.front.james {
-	background-image: url("james.jpg");
-}
-
-.front.guitar {
-	background-image: url("guitar.jpg");
-}
-
-.front.paint {
-	background-image: url("paint.jpg");
 }
 
 /* entire individual container, keeps perspective */
 .flip-container {
 	perspective: 1000;
 	display: inline-block;
-	margin: 0 5px 10px;
+	margin: 10px 0;
 }
 	/* flip the pane when hovered */
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
+		// transform: rotateY(180deg);
 	}
 
 .flip-container, .front, .back {
-	width: 215px;
-	height: 300px;
+	// width: 215px;
+  width: 100%;
+	height: auto;
 }
 
 /* flip speed goes here */
 .flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
+	// transition: 0.6s;
+	// transform-style: preserve-3d;
 
-	position: relative;
+	// position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
 
-	position: absolute;
+	// position: absolute;
 	top: 0;
 	left: 0;
 }
@@ -238,10 +246,15 @@ h1 {
 	transform: rotateY(0deg);
 }
 
+.front img {
+  width: 100%;
+}
+
 /* back, initially hidden pane */
 .back {
-	transform: rotateY(180deg);
+	// transform: rotateY(180deg);
 	background-color: #fff;
+  display: none;
 }
 
 .back {
@@ -267,15 +280,30 @@ h1 {
 #studentLifeText {
 	padding: 20px 20px 40px;
 	color: #fff;
-	background-image: url("/images/bluetint.jpg");
+	background-image: url("/images/bluetint2.jpg");
 	background-size: cover;
 	font-family: Helvetica, Tahoma, sans-serif;
-	height: 680px;
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.6);
 }
 
 #studentLifeText p {
-	width: 75%;
 	text-shadow: 2px 0px 4px rgba(0,0,0,0.6);
+}
+
+.hexes {
+  width: 100%;
+  position: relative;
+  top: -50px;
+}
+
+
+/* CSS for hex pic area */
+
+#studentHexPics {
+  padding: 20px 20px 0;
+  background-color: $NSS-lightest;
+  text-align: center;
+  margin-bottom: -50px;
 }
 
 
@@ -283,7 +311,7 @@ h1 {
 
 #studentLifePics {
 	padding: 20px;
-	background-color: #d5f1ff;
+	background-color: $NSS-lightest;
 	text-align: center;
 }
 
@@ -295,8 +323,66 @@ h1 {
 /* CSS for page footer */
 
 footer {
-	background-color: #777f60;
+	background: $NSS-dark; /* Old browsers */
+  background: -moz-linear-gradient(top, $NSS-dark 0%, $NSS-darker 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $NSS-dark 0%,$NSS-darker 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $NSS-dark 0%,$NSS-darker 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$NSS-dark', endColorstr='$NSS-darker',GradientType=0 ); /* IE6-9 */
 	color: #fff;
+  text-shadow: 0 1px 3px $NSS-darker;
 	text-align: center;
-	padding: 10px 0;
+	padding: 15px 0;
+
+  p {
+    margin: 0;
+  }
 }
+
+
+/******************************
+MEDIA QUERIES
+******************************/
+
+@media (min-width: 400px) {
+
+	#videoHeader .headline {
+		font-size: 1.4em;
+		line-height: 1.0em;
+		width: 325px;
+	}
+
+	.blinking-cursor {
+	  font-size: 30px;
+	}
+
+}
+
+@media (min-width: 480px) {
+
+	#videoHeader .headline {
+		font-size: 1.8em;
+		width: 420px;
+		top: 25px;
+	}
+
+	.blinking-cursor {
+	  font-size: 40px;
+	  bottom: -7px;
+	}
+
+}
+
+@media (min-width: 600px) {
+
+	#videoHeader .headline {
+		font-size: 1.7em;
+		width: 100%;
+	}
+
+}
+
+
+
+
+
+
