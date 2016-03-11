@@ -9,17 +9,21 @@ $NSS-dark: #2d637f;
 $NSS-darker: #214a5e;
 $NSS-darkest: #142c39;
 
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:700,500,400);
+
 body {
 	margin: 0;
 	padding: 0;
 	border: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.6em;
 }
 
 h1 {
-	font-family: monospace;
+	font-family: 'Source Code Pro', monospace;
 	font-weight: normal;
 	margin-top: 0;
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 
 .accent {
@@ -43,7 +47,7 @@ h1 {
 	position: absolute;
 	top: 20px;
 	color: #fff;
-	font-family: monospace;
+	font-family: 'Source Code Pro', monospace;
 	font-size: 1.2em;
 	line-height: 0.9em;
 	width: 280px;
@@ -119,11 +123,21 @@ h1 {
 
 
 /* CSS for "About" section beneath head photo */
+#introHeader {
+  background: $NSS-dark; /* Old browsers */
+  background: -moz-linear-gradient(top, $NSS-dark 0%, $NSS-darker 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $NSS-dark 0%,$NSS-darker 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $NSS-dark 0%,$NSS-darker 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$NSS-dark', endColorstr='$NSS-darker',GradientType=0 ); /* IE6-9 */
+  color: #fff;
+  text-shadow: 0 1px 3px $NSS-darker;
+  padding: 15px 20px;
+  margin-bottom: 0;
+}
 
 #introText {
 	padding: 20px;
 	background-color: $NSS-lightest;
-	font-family: Helvetica, Tahoma, sans-serif;
 }
 
 #introText h1 {
@@ -137,15 +151,15 @@ h1 {
 	background-size: cover;
 	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
 	border-radius: 5px;
-	height: 70px;
-	width: 70px;
-	margin: 0 3px;
+	height: 50px;
+	width: 50px;
+	margin: 3px;
 	display: inline-block;
 }
 
 #techRow {
 	text-align: center;
-	padding: 20px;
+	padding: 20px 20px 10px;
 }
 
 .tech1 {
@@ -186,7 +200,8 @@ h1 {
 
 /* CSS for individual student profile pics */
 
-#classBanner {
+#classBanner,
+#classBanner2 {
   background: $NSS-darker; /* Old browsers */
   background: -moz-linear-gradient(top, $NSS-darker 0%, $NSS-darkest 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, $NSS-darker 0%,$NSS-darkest 100%); /* Chrome10-25,Safari5.1-6 */
@@ -196,6 +211,26 @@ h1 {
   text-shadow: 0 1px 3px $NSS-darkest;
   padding: 15px 20px;
   margin: 0;
+  transition: all 10s;
+  font-size: 1.6em;
+}
+
+#classBanner a {
+  text-decoration: none;
+}
+
+#classBanner span {
+  float: right;
+}
+
+#classBanner span:hover,
+#classBanner span:active {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#classBanner2 {
+  text-align: right;
 }
 
 #studentPics {
@@ -203,47 +238,69 @@ h1 {
 	padding: 20px;
 	color: #fff;
 	box-shadow: 0 2px 4px #000;
+  transition: all 10s;
+
+  #gridWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
 }
+
+.panel {
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.panel-body,
+.panel-heading {
+  padding: 0;
+  border-bottom: 0;
+}
+
 
 /* entire individual container, keeps perspective */
 .flip-container {
 	perspective: 1000;
 	display: inline-block;
-	margin: 10px 0;
+	margin: 30px 15px;  // 10px 0
 }
 	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		// transform: rotateY(180deg);
-	}
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
 
 .flip-container, .front, .back {
-	// width: 215px;
-  width: 100%;
-	height: auto;
+	width: 215px;
+	height: 300px;
+  border-radius: 3px;
 }
 
 /* flip speed goes here */
 .flipper {
-	// transition: 0.6s;
-	// transform-style: preserve-3d;
-
-	// position: relative;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-
-	// position: absolute;
+  box-shadow: 1px 1px 2px #000;
+	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 2;
 }
 
 /* front pane, placed above back */
 .front {
-	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
+  background-size: cover;
+
 }
 
 .front img {
@@ -252,26 +309,38 @@ h1 {
 
 /* back, initially hidden pane */
 .back {
-	// transform: rotateY(180deg);
-	background-color: #fff;
-  display: none;
-}
-
-.back {
+	transform: rotateY(180deg);
 	color: #000;
-	text-align: center;
+	text-align: left;
 	box-sizing: border-box;
 	padding: 20px;
-}
+  background: linear-gradient(
+                rgba(255, 255, 255, 0.6),
+                rgba(255, 255, 255, 0.9)),
+              url('/images/blueHexagon.jpg');
+  background-size: 100%, 100%;
+  h2 {
+    text-align: center;
+    margin: 10px auto;
+    font-size: 1.25em;
+  }
 
-.back a {
-	text-decoration: none;
-	font-weight: bold;
-	color: #8ba854;
-}
+  p#links {
+    text-align: center;
+  }
 
-.back a:hover {
+  a {
+    text-align: center;
+    font-size: 0.75em;
+  	text-decoration: none;
+  	font-weight: bold;
+  	color: #8ba854;
+  }
+
+  a:hover {
 	color: #5c742e;
+  }
+
 }
 
 
@@ -282,12 +351,15 @@ h1 {
 	color: #fff;
 	background-image: url("/images/bluetint2.jpg");
 	background-size: cover;
-	font-family: Helvetica, Tahoma, sans-serif;
 	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.6);
-}
 
-#studentLifeText p {
-	text-shadow: 2px 0px 4px rgba(0,0,0,0.6);
+	p {
+    text-shadow: 2px 0px 4px rgba(0,0,0,0.6);
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
 }
 
 .hexes {
@@ -296,14 +368,22 @@ h1 {
   top: -50px;
 }
 
+.hide {
+  visibility: hidden;
+}
+
 
 /* CSS for hex pic area */
 
 #studentHexPics {
-  padding: 20px 20px 0;
   background-color: $NSS-lightest;
   text-align: center;
   margin-bottom: -50px;
+}
+
+.color {
+  padding: 20px 20px 0;
+  background-color: rgba(33, 74, 94, 0.3);
 }
 
 
@@ -317,6 +397,46 @@ h1 {
 
 .carousel-inner>.item>img {
 	width: 100%;
+}
+
+/*Carousel*/
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+.carousel .carousel-item {
+  width: 300px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+
+.carousel .carousel-item img {
+  width: 100%;
+}
+
+.carousel.carousel-slider {
+  top: 0;
+  left: 0;
+  height: 0;
+}
+
+.carousel.carousel-slider .carousel-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 
@@ -345,6 +465,10 @@ MEDIA QUERIES
 
 @media (min-width: 400px) {
 
+  .carousel .carousel-item {
+    width: 400px;
+  }
+
 	#videoHeader .headline {
 		font-size: 1.4em;
 		line-height: 1.0em;
@@ -372,7 +496,21 @@ MEDIA QUERIES
 
 }
 
+
 @media (min-width: 600px) {
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  #classBanner,
+  #classBanner2 {
+    font-size: 1.8em;
+  }
+
+  .carousel .carousel-item {
+    width: 600px;
+  }
 
 	#videoHeader .headline {
 		font-size: 1.7em;
@@ -380,9 +518,3 @@ MEDIA QUERIES
 	}
 
 }
-
-
-
-
-
-

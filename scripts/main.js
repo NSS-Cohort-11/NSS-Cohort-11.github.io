@@ -9,4 +9,8 @@ $(document).ready(function () {
     top.innerHTML += char;
     }, time += 200);
   });
+
+//initialize material css carousel
+  var carousel = $('.carousel').carousel();
+
 });
