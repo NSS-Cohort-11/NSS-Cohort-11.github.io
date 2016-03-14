@@ -1,24 +1,35 @@
-<div id="studentPics">
-  <h1>.ourClass:</h1>
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h1 class="panel-title" id="classBanner">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">.ourClass {<span class="glyphicon glyphicon-chevron-down"></span></a>
+      </h1>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        <div id="studentPics">
 
-  <div id="gridWrapper">
-    {% for post in site.posts %}
-      {% if post.flipCard == "true" %}
-      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-        <div class="flipper">
-          <div class="front" style="background-image: url({{post.imgUrl}})">
-          <!-- front content -->
-          </div>
-          <div class="back">
-          <h2>{{post.firstName}} {{post.lastName}}</h2>
-          <p>{{post.body}}</p>
-          <p id="links">
-            <a href="{{post.websiteUrl}}">Portfolio</a> | <a href="{{post.githubUrl}}">Github</a> | <a href="{{post.linkedInUrl}}">LinkedIn</a>
-          </p>
+        <div id="gridWrapper">
+            {% for post in site.posts %}
+              {% if post.flipCard == "true" %}
+              <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                <div class="flipper">
+                  <div class="front" style="background-image: url({{post.imgUrl}})">
+                  <!-- front content -->
+                  </div>
+                  <div class="back">
+                  <h2>{{post.firstName}} {{post.lastName}}</h2>
+                  <p>{{post.body}}</p>
+                  <p id="links">
+                    <a href="{{post.websiteUrl}}">Portfolio</a> | <a href="{{post.githubUrl}}">Github</a> | <a href="{{post.linkedInUrl}}">LinkedIn</a>
+                  </p>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+            {% endfor %}
           </div>
         </div>
       </div>
-      {% endif %}
-    {% endfor %}
+    </div>
   </div>
-</div>
+  <h1 id="classBanner2">}</h1>

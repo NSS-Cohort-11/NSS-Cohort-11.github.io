@@ -9,15 +9,8 @@ $(document).ready(function () {
     top.innerHTML += char;
     }, time += 200);
   });
-});
 
 //initialize material css carousel
-$(document).ready(function(){
   var carousel = $('.carousel').carousel();
-  // setInterval(function(){
-  //   console.log('next called')
-  //   n=0
-  //   carousel.next(n)
-  //   n++
-  // }, 3000);
+
 });

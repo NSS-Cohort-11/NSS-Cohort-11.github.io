@@ -1,16 +1,29 @@
 ---
 # Front matter comment to ensure Jekyll properly reads file.
 ---
+
+$NSS-lightest: #d9eaf2;
+$NSS-light: #b4d4e4;
+$NSS-medium: #68a9ca;
+$NSS-dark: #2d637f;
+$NSS-darker: #214a5e;
+$NSS-darkest: #142c39;
+
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:700,500,400);
+
 body {
 	margin: 0;
 	padding: 0;
 	border: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.6em;
 }
 
 h1 {
-	font-family: monospace;
+	font-family: 'Source Code Pro', monospace;
 	font-weight: normal;
 	margin-top: 0;
+  font-size: 1.6em;
 }
 
 .accent {
@@ -32,20 +45,30 @@ h1 {
 
 #videoHeader .headline {
 	position: absolute;
-	top: 30px;
-	left: 30px;
+	top: 20px;
 	color: #fff;
-	font-family: monospace;
-	font-size: 2.2em;
+	font-family: 'Source Code Pro', monospace;
+	font-size: 1.2em;
+	line-height: 0.9em;
+	width: 280px;
+	margin: 0 auto;
+	left: 50%;
+}
+
+#pageHead {
+	text-align: center;
+	position: relative;
+	left: -50%;
+	vertical-align: top;
 }
 
 .blinking-cursor {
   font-weight: 100;
   display: inline;
-  font-size: 48px;
+  font-size: 28px;
   color: #fff;
   position: relative;
-  bottom: -8px;
+  bottom: -5px;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
   -ms-animation: 1s blink step-end infinite;
@@ -100,11 +123,21 @@ h1 {
 
 
 /* CSS for "About" section beneath head photo */
+#introHeader {
+  background: $NSS-dark; /* Old browsers */
+  background: -moz-linear-gradient(top, $NSS-dark 0%, $NSS-darker 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $NSS-dark 0%,$NSS-darker 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $NSS-dark 0%,$NSS-darker 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$NSS-dark', endColorstr='$NSS-darker',GradientType=0 ); /* IE6-9 */
+  color: #fff;
+  text-shadow: 0 1px 3px $NSS-darker;
+  padding: 15px 20px;
+  margin-bottom: 0;
+}
 
 #introText {
 	padding: 20px;
-	background-color: #d5f1ff;
-	font-family: Helvetica, Tahoma, sans-serif;
+	background-color: $NSS-lightest;
 }
 
 #introText h1 {
@@ -118,15 +151,15 @@ h1 {
 	background-size: cover;
 	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
 	border-radius: 5px;
-	height: 70px;
-	width: 70px;
-	margin: 0 3px;
+	height: 50px;
+	width: 50px;
+	margin: 3px;
 	display: inline-block;
 }
 
 #techRow {
 	text-align: center;
-	padding: 20px;
+	padding: 20px 20px 10px;
 }
 
 .tech1 {
@@ -167,11 +200,45 @@ h1 {
 
 /* CSS for individual student profile pics */
 
+#classBanner,
+#classBanner2 {
+  background: $NSS-darker; /* Old browsers */
+  background: -moz-linear-gradient(top, $NSS-darker 0%, $NSS-darkest 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $NSS-darker 0%,$NSS-darkest 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $NSS-darker 0%,$NSS-darkest 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$NSS-darker', endColorstr='$NSS-darkest',GradientType=0 ); /* IE6-9 */
+  color: #fff;
+  text-shadow: 0 1px 3px $NSS-darkest;
+  padding: 15px 20px;
+  margin: 0;
+  transition: all 10s;
+  font-size: 1.6em;
+}
+
+#classBanner a {
+  text-decoration: none;
+}
+
+#classBanner span {
+  float: right;
+}
+
+#classBanner span:hover,
+#classBanner span:active {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#classBanner2 {
+  text-align: right;
+}
+
 #studentPics {
-	background-color: #2d637f;
+	background-color: $NSS-dark;
 	padding: 20px;
 	color: #fff;
 	box-shadow: 0 2px 4px #000;
+  transition: all 10s;
 
   #gridWrapper {
     display: flex;
@@ -181,14 +248,24 @@ h1 {
 
 }
 
+.panel {
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0;
+}
 
+.panel-body,
+.panel-heading {
+  padding: 0;
+  border-bottom: 0;
+}
 
 
 /* entire individual container, keeps perspective */
 .flip-container {
 	perspective: 1000;
 	display: inline-block;
-	margin: 30px 15px;
+	margin: 30px 15px;  // 10px 0
 }
 	/* flip the pane when hovered */
 .flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -199,7 +276,6 @@ h1 {
 	width: 215px;
 	height: 300px;
   border-radius: 3px;
-
 }
 
 /* flip speed goes here */
@@ -225,6 +301,10 @@ h1 {
 	transform: rotateY(0deg);
   background-size: cover;
 
+}
+
+.front img {
+  width: 100%;
 }
 
 /* back, initially hidden pane */
@@ -269,15 +349,41 @@ h1 {
 #studentLifeText {
 	padding: 20px 20px 40px;
 	color: #fff;
-	background-image: url("/images/bluetint.jpg");
+	background-image: url("/images/bluetint2.jpg");
 	background-size: cover;
-	font-family: Helvetica, Tahoma, sans-serif;
-	height: 680px;
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.6);
 
-  p {
-    width: 75%;
+	p {
     text-shadow: 2px 0px 4px rgba(0,0,0,0.6);
   }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+
+.hexes {
+  width: 100%;
+  position: relative;
+  top: -50px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+
+/* CSS for hex pic area */
+
+#studentHexPics {
+  background-color: $NSS-lightest;
+  text-align: center;
+  margin-bottom: -50px;
+}
+
+.color {
+  padding: 20px 20px 0;
+  background-color: rgba(33, 74, 94, 0.3);
 }
 
 
@@ -285,7 +391,7 @@ h1 {
 
 #studentLifePics {
 	padding: 20px;
-	background-color: #d5f1ff;
+	background-color: $NSS-lightest;
 	text-align: center;
 }
 
@@ -293,24 +399,13 @@ h1 {
 	width: 100%;
 }
 
-
-/* CSS for page footer */
-
-footer {
-	background-color: #777f60;
-	color: #fff;
-	text-align: center;
-	padding: 10px 0;
-}
-
-
 /*Carousel*/
 
 .carousel {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 200px;
   -webkit-perspective: 500px;
           perspective: 500px;
   -webkit-transform-style: preserve-3d;
@@ -320,7 +415,7 @@ footer {
 }
 
 .carousel .carousel-item {
-  width: 500px;
+  width: 300px;
   position: absolute;
   top: 50px;
   left: 0;
@@ -342,4 +437,84 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+
+/* CSS for page footer */
+
+footer {
+	background: $NSS-dark; /* Old browsers */
+  background: -moz-linear-gradient(top, $NSS-dark 0%, $NSS-darker 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $NSS-dark 0%,$NSS-darker 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $NSS-dark 0%,$NSS-darker 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$NSS-dark', endColorstr='$NSS-darker',GradientType=0 ); /* IE6-9 */
+	color: #fff;
+  text-shadow: 0 1px 3px $NSS-darker;
+	text-align: center;
+	padding: 15px 0;
+
+  p {
+    margin: 0;
+  }
+}
+
+
+/******************************
+MEDIA QUERIES
+******************************/
+
+@media (min-width: 400px) {
+
+  .carousel .carousel-item {
+    width: 400px;
+  }
+
+	#videoHeader .headline {
+		font-size: 1.4em;
+		line-height: 1.0em;
+		width: 325px;
+	}
+
+	.blinking-cursor {
+	  font-size: 30px;
+	}
+
+}
+
+@media (min-width: 480px) {
+
+	#videoHeader .headline {
+		font-size: 1.8em;
+		width: 420px;
+		top: 25px;
+	}
+
+	.blinking-cursor {
+	  font-size: 40px;
+	  bottom: -7px;
+	}
+
+}
+
+
+@media (min-width: 600px) {
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  #classBanner,
+  #classBanner2 {
+    font-size: 1.8em;
+  }
+
+  .carousel .carousel-item {
+    width: 600px;
+  }
+
+	#videoHeader .headline {
+		font-size: 1.7em;
+		width: 100%;
+	}
+
 }
