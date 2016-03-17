@@ -289,8 +289,8 @@ h1 {
 }
 
 .flip-container, .front, .back {
-	width: 215px;
-	height: 300px;
+	width: 220px;
+	height: 310px;
   border-radius: 3px;
 }
 
@@ -421,7 +421,7 @@ h1 {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 350px;
   -webkit-perspective: 500px;
           perspective: 500px;
   -webkit-transform-style: preserve-3d;
@@ -481,8 +481,10 @@ MEDIA QUERIES
 
 @media (min-width: 400px) {
 
-  .carousel .carousel-item {
+  .carousel {
     width: 400px;
+    margin: auto;
+
   }
 
 	#videoHeader .headline {
@@ -524,13 +526,37 @@ MEDIA QUERIES
     font-size: 1.8em;
   }
 
-  .carousel .carousel-item {
+  .carousel {
     width: 600px;
+    margin: auto;
   }
 
-	#videoHeader .headline {
-		font-size: 1.7em;
-		width: 100%;
-	}
+  #videoHeader .headline {
+    font-size: 1.7em;
+    width: 100%;
+  }
+
+}
+
+@media (min-width: 1000px) {
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  #classBanner,
+  #classBanner2 {
+    font-size: 1.8em;
+  }
+
+  .carousel {
+    width: 800px;
+    margin: auto;
+  }
+
+  #videoHeader .headline {
+    font-size: 1.7em;
+    width: 100%;
+  }
 
 }
