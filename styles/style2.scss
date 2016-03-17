@@ -26,6 +26,10 @@ h1 {
   font-size: 1.6em;
 }
 
+p {
+  margin: 0 0 20px;
+}
+
 .accent {
 	font-family: Times, serif;
 	font-weight: bold;
@@ -513,15 +517,24 @@ MEDIA QUERIES
 }
 
 
-@media (min-width: 600px) {
+@media (min-width: 640px) {
 
   h1 {
     font-size: 1.8em;
   }
 
+  .tech {
+    height: 80px;
+    width: 80px;
+  }
+
   #classBanner,
   #classBanner2 {
     font-size: 1.8em;
+  }
+
+  .carousel {
+    height: 400px;
   }
 
   .carousel .carousel-item {
