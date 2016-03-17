@@ -149,7 +149,7 @@ h1 {
 
 .tech {
 	background-size: cover;
-	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+	box-shadow: inset 0px 0px 8px rgba(0,0,0,0.5);
 	border-radius: 5px;
 	height: 50px;
 	width: 50px;
@@ -164,37 +164,53 @@ h1 {
 
 .tech1 {
 	background-color: #ccc;
-	background-image: url("http://www.schoolbios.com/assets/images/design/technology/jquery.png");
+	background-image: url("../images/mongodb-logo.jpg");
 }
 
 .tech2 {
-	background-image: url("http://3.bp.blogspot.com/-PTty3CfTGnA/TpZOEjTQ_WI/AAAAAAAAAeo/KeKt_D5X2xo/s1600/js.jpg");
+	background-image: url("../images/angular-logo.jpg");
 }
 
 .tech3 {
 	background-color: #fff;
-	background-image: url("http://voidcanvas.com/wp-content/uploads/2015/10/angularjs-logo.png");
+	background-image: url("../images/node-logo.jpg");
 }
 
 .tech4 {
-	background-image: url("https://kimtatthang.files.wordpress.com/2015/03/learning-node-js.png");
+	background-image: url("../images/html-logo.jpg");
 }
 
 .tech5 {
 	background-color: #000;
-	background-image: url("https://image.freepik.com/free-icon/github-logo-in-a-rounded-square_318-40761.jpg");
+	background-image: url("../images/css-logo.jpg");
 }
 
 .tech6 {
-	background-image: url("http://ionicframework.com/img/ionic-logo-blog.png");
+	background-image: url("../images/javascript-logo.jpg");
 }
 
 .tech7 {
-	background-image: url("http://www.joshmorony.com/wp-content/uploads/2015/08/firebase-header-200x200.png");
+	background-image: url("../images/sass-logo.jpg");
 }
 
 .tech8 {
-	background-image: url("http://www.networkredux.com/sites/default/files/parners_summary_mongodb.jpg");
+	background-image: url("../images/jquery-logo.jpg");
+}
+
+.tech9 {
+  background-image: url("../images/firebase-logo.jpg");
+}
+
+.tech10 {
+  background-image: url("../images/postgresql-logo.jpg");
+}
+
+.tech11 {
+  background-image: url("../images/ionic-logo.jpg");
+}
+
+.tech12 {
+  background-image: url("../images/git-logo.jpg");
 }
 
 
