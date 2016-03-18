@@ -52,8 +52,8 @@ p {
 	top: 20px;
 	color: #fff;
 	font-family: 'Source Code Pro', monospace;
-	font-size: 1.2em;
-	line-height: 0.9em;
+	font-size: 1.4em;
+	line-height: 1.0em;
 	width: 280px;
 	margin: 0 auto;
 	left: 50%;
@@ -69,10 +69,10 @@ p {
 .blinking-cursor {
   font-weight: 100;
   display: inline;
-  font-size: 28px;
+  font-size: 36px;
   color: #fff;
   position: relative;
-  bottom: -5px;
+  bottom: -6px;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
   -ms-animation: 1s blink step-end infinite;
@@ -140,12 +140,17 @@ p {
 }
 
 #introText {
-	padding: 20px;
+	padding: 20px 25px;
 	background-color: $NSS-lightest;
 }
 
 #introText h1 {
 	color: #2d637f;
+}
+
+#emphasis {
+  font-weight: bold;
+  font-style: italic;
 }
 
 
@@ -155,8 +160,8 @@ p {
 	background-size: cover;
 	box-shadow: inset 0px 0px 8px rgba(0,0,0,0.5);
 	border-radius: 5px;
-	height: 50px;
-	width: 50px;
+	height: 80px;
+	width: 80px;
 	margin: 3px;
 	display: inline-block;
 }
@@ -168,53 +173,53 @@ p {
 
 .tech1 {
 	background-color: #ccc;
-	background-image: url("../images/mongodb-logo.jpg");
+	background-image: url("../images/techlogos/mongodb-logo.jpg");
 }
 
 .tech2 {
-	background-image: url("../images/angular-logo.jpg");
+	background-image: url("../images/techlogos/angular-logo.jpg");
 }
 
 .tech3 {
 	background-color: #fff;
-	background-image: url("../images/node-logo.jpg");
+	background-image: url("../images/techlogos/node-logo.jpg");
 }
 
 .tech4 {
-	background-image: url("../images/html-logo.jpg");
+	background-image: url("../images/techlogos/html-logo.jpg");
 }
 
 .tech5 {
 	background-color: #000;
-	background-image: url("../images/css-logo.jpg");
+	background-image: url("../images/techlogos/css-logo.jpg");
 }
 
 .tech6 {
-	background-image: url("../images/javascript-logo.jpg");
+	background-image: url("../images/techlogos/javascript-logo.jpg");
 }
 
 .tech7 {
-	background-image: url("../images/sass-logo.jpg");
+	background-image: url("../images/techlogos/sass-logo.jpg");
 }
 
 .tech8 {
-	background-image: url("../images/jquery-logo.jpg");
+	background-image: url("../images/techlogos/jquery-logo.jpg");
 }
 
 .tech9 {
-  background-image: url("../images/firebase-logo.jpg");
+  background-image: url("../images/techlogos/firebase-logo.jpg");
 }
 
 .tech10 {
-  background-image: url("../images/postgresql-logo.jpg");
+  background-image: url("../images/techlogos/postgresql-logo.jpg");
 }
 
 .tech11 {
-  background-image: url("../images/ionic-logo.jpg");
+  background-image: url("../images/techlogos/ionic-logo.jpg");
 }
 
 .tech12 {
-  background-image: url("../images/git-logo.jpg");
+  background-image: url("../images/techlogos/git-logo.jpg");
 }
 
 
@@ -335,18 +340,31 @@ p {
 	box-sizing: border-box;
 	padding: 20px;
   background: linear-gradient(
-                rgba(255, 255, 255, 0.6),
+                rgba(255, 255, 255, 0.9),
                 rgba(255, 255, 255, 0.9)),
               url('/images/blueHexagon.jpg');
-  background-size: 100%, 100%;
+  background-size: 110%, 110%;
+  position: relative;
+
   h2 {
     text-align: center;
-    margin: 10px auto;
-    font-size: 1.25em;
+    margin: 0 auto 15px;
+    font-size: 1.2em;
+    color: #214a5e;
+  }
+
+  .studentText {
+    font-size: 0.9em;
+    height: 190px;
+    color: #7d7d7d;
+    margin-bottom: 0;
   }
 
   p#links {
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 28px;
   }
 
   a {
@@ -367,29 +385,18 @@ p {
 /* CSS for student life text below individual photos */
 
 #studentLifeText {
-	padding: 20px 20px 40px;
+	padding: 20px;
 	color: #fff;
-	background-image: url("/images/bluetint2.jpg");
-	background-size: cover;
-	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.6);
+  background-color: $NSS-medium;
 
-	p {
-    text-shadow: 2px 0px 4px rgba(0,0,0,0.6);
+  p {
+    // text-shadow: 2px 0px 4px rgba(0,0,0,0.6);
   }
 
   h1 {
     margin-bottom: 20px;
+    text-shadow: 0px 1px 3px rgba(45,99,127,0.6);
   }
-}
-
-.hexes {
-  width: 100%;
-  position: relative;
-  top: -50px;
-}
-
-.hide {
-  visibility: hidden;
 }
 
 
@@ -397,22 +404,32 @@ p {
 
 #studentHexPics {
   background-color: $NSS-lightest;
+  background-image: url("/images/blue-tint-code.jpg");
+  background-size: cover;
   text-align: center;
-  margin-bottom: -50px;
+  margin-bottom: -70px;
+  padding: 0 5%;
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.6);
 }
 
-.color {
-  padding: 20px 20px 0;
-  background-color: rgba(33, 74, 94, 0.3);
+.hexes {
+  width: 100%;
+  position: relative;
+  top: -30px;
+}
+
+.hex5,
+.hex7 {
+  display: none;
 }
 
 
 /* CSS for pics/carousel area */
 
 #studentLifePics {
-	padding: 20px;
-	background-color: $NSS-lightest;
-	text-align: center;
+	padding: 0;
+	background-color: $NSS-light;
+  text-align: center;
 }
 
 .carousel-inner>.item>img {
@@ -435,10 +452,10 @@ p {
 }
 
 .carousel .carousel-item {
-  width: 300px;
+  width: 100%;
   position: absolute;
-  top: 50px;
   left: 0;
+  top: 70px;
 }
 
 .carousel .carousel-item img {
@@ -471,10 +488,22 @@ footer {
 	color: #fff;
   text-shadow: 0 1px 3px $NSS-darker;
 	text-align: center;
-	padding: 15px 0;
+	padding: 15px 50px;
 
   p {
     margin: 0;
+    font-size: 0.8em;
+  }
+
+  p a:link,
+  p a:visited {
+    color: #ffef99;
+  }
+
+  p a:hover,
+  p a:active {
+    color: #d9eaf2;
+    text-decoration: none;
   }
 }
 
@@ -486,9 +515,12 @@ MEDIA QUERIES
 @media (min-width: 400px) {
 
   .carousel {
-    width: 400px;
-    margin: auto;
+    margin: 0 auto;
+    height: 370px;
+  }
 
+  .carousel .carousel-item {
+    top: 90px;
   }
 
 	#videoHeader .headline {
@@ -516,6 +548,10 @@ MEDIA QUERIES
 	  bottom: -7px;
 	}
 
+  #studentLifePics {
+    padding: 9% 6% 6%;
+  }
+
 }
 
 
@@ -523,6 +559,14 @@ MEDIA QUERIES
 
   h1 {
     font-size: 1.8em;
+  }
+
+  #introHeader {
+    padding-left: 35px;
+  }
+
+  #introText {
+    padding: 25px 35px;
   }
 
   .tech {
@@ -533,23 +577,65 @@ MEDIA QUERIES
   #classBanner,
   #classBanner2 {
     font-size: 1.8em;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  #studentLifeText {
+    padding: 25px 35px 35px;
+  }
+
+  .hex5 {
+    display: block;
+  }
+
+  .hex3,
+  .hex7 {
+    display: none;
+  }
+
+  #studentLifePics {
+    padding-top: 5% 6% 6%;
   }
 
   .carousel {
-    height: 400px;
+    height: 370px;
   }
 
   .carousel .carousel-item {
-    width: 600px;
+    width: 500px;
     margin: auto;
   }
 
   #videoHeader .headline {
-    font-size: 1.7em;
+    font-size: 1.6em;
     width: 100%;
   }
 
 }
+
+
+@media (min-width: 768px) {
+
+  #videoHeader .headline {
+    font-size: 2.0em;
+  }
+
+  .blinking-cursor {
+    font-size: 48px;
+    bottom: -8px;
+  }
+
+  .carousel {
+    height: 420px;
+  }
+
+  .carousel .carousel-item {
+    width: 600px;
+  }
+
+}
+
 
 @media (min-width: 1000px) {
 
@@ -562,14 +648,28 @@ MEDIA QUERIES
     font-size: 1.8em;
   }
 
+  .hex7 {
+    display: block;
+  }
+
+  .hex3,
+  .hex5 {
+    display: none;
+  }
+
   .carousel {
     width: 800px;
     margin: auto;
   }
 
   #videoHeader .headline {
-    font-size: 1.7em;
+    font-size: 2.4em;
     width: 100%;
+  }
+
+  .blinking-cursor {
+    font-size: 58px;
+    bottom: -9px;
   }
 
 }
