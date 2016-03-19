@@ -55,15 +55,14 @@ p {
 	font-family: 'Source Code Pro', monospace;
 	font-size: 1.4em;
 	line-height: 1.0em;
-	width: 280px;
+	width: 100%;
 	margin: 0 auto;
-	left: 50%;
+  padding: 0 5%;
 }
 
 #pageHead {
 	text-align: center;
 	position: relative;
-	left: -50%;
 	vertical-align: top;
 }
 
@@ -527,7 +526,6 @@ MEDIA QUERIES
 	#videoHeader .headline {
 		font-size: 1.4em;
 		line-height: 1.0em;
-		width: 325px;
 	}
 
 	.blinking-cursor {
@@ -540,7 +538,6 @@ MEDIA QUERIES
 
 	#videoHeader .headline {
 		font-size: 1.8em;
-		width: 420px;
 		top: 25px;
 	}
 
