@@ -4,7 +4,7 @@
 <img src="https://avatars2.githubusercontent.com/u/15036484?v=3&s=200.png">
 </p>
 
-Nashville Software School Cohort 11 strives to be an inclusive and highly cooperative group of software developers. To that end, here we credit every contributor who completed a pull request to improve the website. Special mention is made for the editors and team members who were responsible for the completion of the website. Nearly 100% of our cohort has contributed to our website.
+Nashville Software School Cohort 11 strives to be an inclusive and highly cooperative group of software developers. To that end, here we credit every major contributor who helped to improve the website. However, we are proud to say that every member of Cohort 11 has contributed to our website.
 
 ## Relevant Tools
 The NSS Cohort 11 website was built using Jekyll and Bootstrap. Materialize CSS was used to for the photo carousel. 
