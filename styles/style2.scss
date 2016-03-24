@@ -53,7 +53,7 @@ p {
 	top: 20px;
 	color: #fff;
 	font-family: 'Source Code Pro', monospace;
-	font-size: 1.3em;
+	font-size: 1.1em;
 	line-height: 1.0em;
 	width: 100%;
 	margin: 0 auto;
@@ -354,8 +354,8 @@ p {
 /* front pane, placed above back */
 .front {
 	/* for firefox 31 */
- //  -webkit-transform: rotateY(180deg);
-	// transform: rotateY(180deg);
+  -webkit-transform: rotateY(0);
+	transform: rotateY(0);
   background-size: cover;
 
 }
