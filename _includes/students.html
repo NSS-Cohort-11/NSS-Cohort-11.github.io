@@ -11,7 +11,8 @@
         <div id="gridWrapper">
             {% for post in site.posts %}
               {% if post.flipCard == "true" %}
-              <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flip-container">
+               <!-- <div class="flip-container" ontouchstart="this.classList.toggle('hover');"> -->
                 <div class="flipper">
                   <div class="front" style="background-image: url({{post.imgUrl}})">
                   <!-- front content -->
