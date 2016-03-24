@@ -238,7 +238,7 @@ p {
   text-shadow: 0 1px 3px $NSS-darkest;
   padding: 15px 20px;
   margin: 0;
-  transition: all 10s;
+  // transition: all 10s;
   font-size: 1.6em;
 }
 
@@ -297,31 +297,44 @@ p {
 
 /* entire individual container, keeps perspective */
 .flip-container {
-  -webkit-perspective: 1000px;
-	perspective: 1000px;
 	display: inline-block;
+  position: relative;
 	margin: 30px 15px;  // 10px 0
 }
-	/* flip the pane when hovered */
-// .flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container:active .flipper {
-.flip-container:hover .front {
-  -webkit-transform: rotateY(180deg);
-	transform: rotateY(180deg);
+
+.info {
+  position: absolute;
+  right: 0;
+  color: #fff;
+  background-color: #008000;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  margin: 8px;
+  line-height: 1.3em;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: Times, serif;
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+.flipper {
+  position: relative;
+}
+
+.flip-container:hover {
   cursor: pointer;
 }
 
-.flip-container:hover .back {
-  -webkit-transform: rotateY(0);
-  transform: rotateY(0);
-  cursor: pointer;
-}
-
-.flip-container.flipped .front {
+.flipper.flipped .front {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-.flip-container .back {
+.flipper.flipped .back {
   -webkit-transform: rotateY(0);
   transform: rotateY(0);
 }
@@ -334,16 +347,16 @@ p {
 
 /* flip speed goes here */
 .front, .back {
-	transition: 0.6s;
   -webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
-	position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
   -webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
   box-shadow: 1px 1px 2px #000;
 	position: absolute;
 	top: 0;
@@ -353,9 +366,6 @@ p {
 
 /* front pane, placed above back */
 .front {
-	/* for firefox 31 */
-  -webkit-transform: rotateY(0);
-	transform: rotateY(0);
   background-size: cover;
 
 }
@@ -377,7 +387,7 @@ p {
                 rgba(255, 255, 255, 0.9)),
               url('/images/blueHexagon.jpg');
   background-size: 110%, 110%;
-  position: relative;
+
 
   h2 {
     text-align: center;

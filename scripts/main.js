@@ -15,7 +15,7 @@ $(document).ready(function () {
 
 
   (function() {
-    var cards = document.querySelectorAll(".flip-container");
+    var cards = document.querySelectorAll(".flipper");
     for ( var i  = 0, len = cards.length; i < len; i++ ) {
       var card = cards[i];
       clickListener( card );
