@@ -303,7 +303,7 @@ p {
 	margin: 30px 15px;  // 10px 0
 }
 	/* flip the pane when hovered */
-.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container:active .flipper {
+.flip-container:hover .flipper, .flip-container:active .flipper {
 	transform: rotateY(180deg);
   cursor: pointer;
 }
