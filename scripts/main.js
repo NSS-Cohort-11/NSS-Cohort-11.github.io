@@ -10,10 +10,10 @@ $(document).ready(function () {
     }, time += 200);
   });
 
-//initialize material css carousel
+  //initialize material css carousel
   var carousel = $('.carousel').carousel();
 
-
+  // Click function to flip student cards; adds and removes 'flipped' class
   (function() {
     var cards = document.querySelectorAll(".flipper");
     for ( var i  = 0, len = cards.length; i < len; i++ ) {
