@@ -227,6 +227,53 @@ p {
 
 /* CSS for individual student profile pics */
 
+#soundcloud {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff7700+0,ff3300+100 */
+  background: #ff7700; /* Old browsers */
+  background: -moz-linear-gradient(top, #ff7700 0%, #ff3300 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ff7700 0%,#ff3300 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ff7700 0%,#ff3300 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7700', endColorstr='#ff3300',GradientType=0 ); /* IE6-9 */
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  border: 2px solid #D42C01;
+  border-radius: 4px;
+}
+
+#soundcloud img {
+  margin-bottom: 18px;
+  width: 100%;
+  max-width: 225px
+}
+
+p#sctext1 {
+  max-width: 225px;
+  margin: 0 auto 10px;
+}
+
+p#sctext2 {
+  max-width: 225px;
+  margin: 0 auto;
+}
+
+#soundcloud:hover,
+#soundcloud:active {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#E06B04+0,D62C01+100 */
+  background: #E06B04; /* Old browsers */
+  background: -moz-linear-gradient(top, #E06B04 0%, #D62C01 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #E06B04 0%,#D62C01 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #E06B04 0%,#D62C01 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E06B04', endColorstr='#D62C01',GradientType=0 ); /* IE6-9 */
+}
+
+#studentPics a:hover {
+  text-decoration: none;
+}
+
 #classBanner,
 #classBanner2 {
   background: $NSS-darker; /* Old browsers */
@@ -621,6 +668,14 @@ MEDIA QUERIES
     width: 80px;
   }
 
+  p#sctext1 {
+    max-width: none;
+  }
+
+  p#sctext2 {
+    max-width: none;
+  }
+
   #classBanner,
   #classBanner2 {
     font-size: 1.8em;
@@ -717,6 +772,38 @@ MEDIA QUERIES
   .blinking-cursor {
     font-size: 58px;
     bottom: -9px;
+  }
+
+}
+
+
+@media (min-width: 1180px) {
+
+  #soundcloud {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    border: 2px solid #D42C01;
+  }
+
+  #soundcloud img {
+    margin: 0 30px 0 0;
+    display: inline-block;
+  }
+
+  p#sctext1,
+  p#sctext2 {
+    display: inline-block;
+    margin-bottom: 0;
+    position: relative;
+    top: 4.4px;
+  }
+
+  p#sctext1 {
+    margin-right: 10px;
   }
 
 }
